@@ -35,8 +35,10 @@ int main()
 	{
 		int addSubStatus = addSubTopic("remoteGroup");
 		printf("add remote sub topic status : %d\n",addSubStatus);
-		int addLocalSubStatus = addSubTopic("localTest1");
-		printf("add local sub topic status : %d\n",addLocalSubStatus);
+//		int addLocalSubStatus = addSubTopic("localTest1");
+//		printf("add local sub topic status : %d\n",addLocalSubStatus);
+		int addLoginStatus = addSubTopic("woLogin");
+		printf("add local subTopic woLogin status: %d\n",addLoginStatus);
 
 		char *testMsg = "{\"sys_cpuInfo\":\"5.01367%\"}";
 		int i=0;
@@ -55,7 +57,7 @@ int main()
 					printf("remove local sub topic status : %d\n",removeStatus);
 				}
 
-				sendRemoteMsg(testMsg,"App1|App2|App3",10001);
+//				sendRemoteMsg(testMsg,"App1|App2|App3",10001);
 				sendLocalMsg(testMsg,"WIS");
 
 				sleep(5);
